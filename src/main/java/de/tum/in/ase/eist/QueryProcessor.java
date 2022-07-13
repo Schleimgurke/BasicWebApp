@@ -6,18 +6,22 @@ import org.springframework.stereotype.Service;
 public class QueryProcessor {
 
     public String process(String query) {
-		query = query.toLowerCase();
+        query = query.toLowerCase();
         if (query.contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
-           return "Anna";
+            return "Anna";
         } else if(query.contains("plus")){ // TODO extend the programm here
-            return "" + Integer.parseInt(query.substring(query.indexOf("is" + 3), query.indexOf("plus") - 1)) + Integer.parseInt(query.substring(query.indexOf("plus") + 1));
+            System.out.println(query.indexOf("is") + ":" + (query.indexOf("plus") - 1));
+            int x = Integer.parseInt(query.substring(query.indexOf("is") + 3, query.indexOf("plus") - 1)) + Integer.parseInt(query.substring(query.indexOf("plus") + 5));
+            return x + "";
         }else{
 
             return "";
         }
     }
 }
+
+
