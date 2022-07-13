@@ -14,7 +14,7 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "Anna";
         } else if(query.contains("plus")){ // TODO extend the programm here
-            return "" + Integer.parseInt(query.substring(query.indexOf("ist" + 4), query.indexOf("plus") - 1)) + Integer.parseInt(query.substring(query.indexOf("plus") + 1));
+            return "" + Integer.parseInt(query.substring(query.indexOf("is" + 3), query.indexOf("plus") - 1)) + Integer.parseInt(query.substring(query.indexOf("plus") + 1));
         }else{
 
             return "";
